@@ -24,7 +24,7 @@ int randInt(int low, int high) {
 void resetBoard(int board[ROW_COUNT][COLUMN_COUNT]) {
     for (int i = 0; i < ROW_COUNT; i++) {
         for (int j = 0; j < COLUMN_COUNT; j++) {
-            board[i][j] = 0;
+            board[i][j] = EMPTY;
         }
     }
 }
@@ -59,7 +59,7 @@ void printBoard(int board[ROW_COUNT][COLUMN_COUNT]) {
 }
 
 int isValidColumn(int board[ROW_COUNT][COLUMN_COUNT], int column) {
-    if(board[ROW_COUNT-1][column-1] == 0) {
+    if(board[ROW_COUNT-1][column-1] == EMPTY) {
         return true;
     }
     else {
@@ -70,7 +70,7 @@ int isValidColumn(int board[ROW_COUNT][COLUMN_COUNT], int column) {
 void dropPiece(int board[ROW_COUNT][COLUMN_COUNT], int column, int piece) {
     if(isValidColumn(board, column)) {
         for(int i=0; i<ROW_COUNT; i++) {
-            if(board[i][column-1] == 0) {
+            if(board[i][column-1] == EMPTY) {
                 board[i][column-1] = piece;
                 break;
             }
@@ -78,12 +78,54 @@ void dropPiece(int board[ROW_COUNT][COLUMN_COUNT], int column, int piece) {
     }
 }
 
+int winningWindow(int window[4], int piece) {
+    for(int i=0; i<4; i++) {
+        if(window[i] != piece) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int winningMove(int board[ROW_COUNT][COLUMN_COUNT], int piece) {
+    int window[4];
+
+    // horizontal
+    for(int r=0; r<ROW_COUNT; r++) {
+        for(int c=0; c<COLUMN_COUNT-3; c++) {
+            for(int i=0; i<4; i++) window[i] = board[r][c+i];
+            if(winningWindow(window, piece)) return true;
+        }
+    }
+
+    // vertivcal
+    for(int r=0; r<ROW_COUNT-3; r++) {
+        for(int c=0; c<COLUMN_COUNT; c++) {
+            for(int i=0; i<4; i++) window[i] = board[r+i][c];
+            if(winningWindow(window, piece)) return true;
+        }
+    }
+
+    // diagonal
+    for(int r=0; r<ROW_COUNT-3; r++) {
+        for(int c=0; c<COLUMN_COUNT-3; c++) {
+            // diagonal left
+            for(int i=0; i<4; i++) window[i] = board[r+i][c+i];
+            if(winningWindow(window, piece)) return true;
+            // diagonal right
+            for(int i=0; i<4; i++) window[i] = board[r+i][c+3-i];
+            if(winningWindow(window, piece)) return true;
+        }
+    }
+    return false;
+}
+
 int changeTurn(int turn) {
-    if(turn == 1) {
-        return 2;
+    if(turn == PLAYER) {
+        return AI;
     }
     else {
-        return 1;
+        return PLAYER;
     }
 }
 
@@ -106,17 +148,27 @@ int main() {
     int turn = 1;
 
     while(true) {
-        if(turn == 1) {
+        if(turn == PLAYER) {
             int col = getPlayerColumn();
             dropPiece(board, col, PLAYER);
             printBoard(board);
 
+            if(winningMove(board, PLAYER)) {
+                printf("Player won!\n\n");
+                break;
+            }
+
             turn = changeTurn(turn);
         }
-        else {
+        else if(turn == AI) {
             int col = randInt(1, 7);
             dropPiece(board, col, AI);
             printBoard(board);
+
+            if(winningMove(board, AI)) {
+                printf("AI won!\n\n");
+                break;
+            }
 
             turn = changeTurn(turn);
         }
