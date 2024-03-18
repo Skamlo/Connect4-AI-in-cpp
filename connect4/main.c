@@ -26,6 +26,9 @@ int main() {
     int depth = 8;
     int turn = 1;
 
+    printf("Enter the depth of minimax algorithm (the recommended value is 8): ");
+    scanf("%d", &depth);
+
     printBoard(board);
 
     while(!gameOver) {
@@ -43,8 +46,6 @@ int main() {
         }
 
         if(turn == AI) {
-            // int* validLocations = getValidLocations(board);
-            // int col = randChoice(validLocations);
             int col = minimax(board, depth, LOW_VALUE, HIGH_VALUE, true)[0];
 
             dropPiece(board, col, AI);
