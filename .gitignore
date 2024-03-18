@@ -1,2 +1,4 @@
 ignore
 .vscode
+test.c
+test.exe

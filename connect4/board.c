@@ -50,19 +50,24 @@ void printBoard(int board[ROW_COUNT][COLUMN_COUNT]) {
 }
 
 int isValidColumn(int board[ROW_COUNT][COLUMN_COUNT], int column) {
-    if(board[ROW_COUNT-1][column-1] == EMPTY) {
-        return true;
+    if(board[ROW_COUNT-1][column-1] == EMPTY) return true;
+    else return false;
+}
+
+int* getValidLocations(int board[ROW_COUNT][COLUMN_COUNT]) {
+    static int validLocations[COLUMN_COUNT];
+    for(int c=0; c<COLUMN_COUNT; c++) {
+        if(isValidColumn(board, c)) validLocations[c] = true;
+        else validLocations[c] = false;
     }
-    else {
-        return false;
-    }
+    return validLocations;
 }
 
 void dropPiece(int board[ROW_COUNT][COLUMN_COUNT], int column, int piece) {
     if(isValidColumn(board, column)) {
         for(int i=0; i<ROW_COUNT; i++) {
-            if(board[i][column-1] == EMPTY) {
-                board[i][column-1] = piece;
+            if(board[i][column] == EMPTY) {
+                board[i][column] = piece;
                 break;
             }
         }
@@ -109,4 +114,11 @@ int winningMove(int board[ROW_COUNT][COLUMN_COUNT], int piece) {
         }
     }
     return false;
+}
+
+int isDraw(int board[ROW_COUNT][COLUMN_COUNT]) {
+    for(int c=0; c<COLUMN_COUNT; c++) {
+        if(isValidColumn(board, c)) return false;
+    }
+    return true;
 }

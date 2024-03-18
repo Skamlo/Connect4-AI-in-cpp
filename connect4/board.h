@@ -19,3 +19,5 @@ int isValidColumn(int board[ROW_COUNT][COLUMN_COUNT], int column);
 void dropPiece(int board[ROW_COUNT][COLUMN_COUNT], int column, int piece);
 int winningWindow(int window[4], int piece);
 int winningMove(int board[ROW_COUNT][COLUMN_COUNT], int piece);
+int isDraw(int board[ROW_COUNT][COLUMN_COUNT]);
+int* getValidLocations(int board[ROW_COUNT][COLUMN_COUNT]);

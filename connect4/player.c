@@ -8,7 +8,7 @@ int getPlayerColumn() {
     while(true) {
         scanf("%d", &col);
         if(col >= 1 && col <= 7) {
-            break;
+            return col;
         }
         printf("Invalid column number. Enter new: ");
     }

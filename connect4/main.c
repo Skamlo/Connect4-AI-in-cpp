@@ -12,46 +12,57 @@
 #define true 1
 #define false 0
 
+#define LOW_VALUE -1000000000
+#define HIGH_VALUE 1000000000
+
 int changeTurn(int turn) {
-    if(turn == PLAYER) {
-        return AI;
-    }
-    else {
-        return PLAYER;
-    }
+    if(turn == PLAYER) return AI;
+    else return PLAYER;
 }
 
 int main() {
     int board[ROW_COUNT][COLUMN_COUNT] = {0};
-    printBoard(board);
-
+    int gameOver = false;
+    int depth = 8;
     int turn = 1;
 
-    while(true) {
+    printBoard(board);
+
+    while(!gameOver) {
         if(turn == PLAYER) {
             int col = getPlayerColumn();
-            dropPiece(board, col, PLAYER);
+            dropPiece(board, col-1, PLAYER);
             printBoard(board);
 
             if(winningMove(board, PLAYER)) {
                 printf("Player won!\n\n");
-                break;
+                gameOver = true;
             }
 
             turn = changeTurn(turn);
         }
-        else if(turn == AI) {
-            int col = randInt(1, 7);
+
+        if(turn == AI) {
+            // int* validLocations = getValidLocations(board);
+            // int col = randChoice(validLocations);
+            int col = minimax(board, depth, LOW_VALUE, HIGH_VALUE, true)[0];
+
             dropPiece(board, col, AI);
             printBoard(board);
 
             if(winningMove(board, AI)) {
                 printf("AI won!\n\n");
-                break;
+                gameOver = true;
             }
 
             turn = changeTurn(turn);
         }
+
+        if(isDraw(board)) {
+            printf("Draw!\n\n");
+            gameOver = true;
+        }
     }
     
+    return 0;
 }
