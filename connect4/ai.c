@@ -71,8 +71,8 @@ int oppositPiece(int player) {
     else return PLAYER;
 }
 
-int windowEvaluate(int window[4], int piece) {
-    int score = 0;
+double windowEvaluate(int window[4], int piece) {
+    double score = 0;
     int oppPiece = oppositPiece(piece);
     
     int countPiece = 0;
@@ -85,19 +85,19 @@ int windowEvaluate(int window[4], int piece) {
         else if(window[i] == oppPiece) countOppPiece += 1;
     }
 
-    if(countPiece == 3 && countEmpty == 1) score += 5;
-    if(countPiece == 2 && countEmpty == 2) score += 2;
-    if(countOppPiece == 3 && countEmpty == 1) score -= 4;
+    if(countPiece == 3 && countEmpty == 1) score += 5.0;
+    if(countPiece == 2 && countEmpty == 2) score += 2.0;
+    if(countOppPiece == 3 && countEmpty == 1) score -= 4.0;
 
     return score;
 }
 
-int scorePosition(int board[ROW_COUNT][COLUMN_COUNT], int piece) {
-    int score = 0;
+double scorePosition(int board[ROW_COUNT][COLUMN_COUNT], int piece) {
+    double score = 0;
 
     // center column
     for(int r=0; r<ROW_COUNT; r++) {
-        if(board[r][COLUMN_COUNT/2] == piece) score += 3;
+        if(board[r][COLUMN_COUNT/2] == piece) score += 3.0;
     }
 
     int window[4];
@@ -142,33 +142,40 @@ int isTerminalNode(int board[ROW_COUNT][COLUMN_COUNT]) {
     return false;
 }
 
-int* minimax(int board[ROW_COUNT][COLUMN_COUNT], int depth, int alpha, int beta, int maximizingPlayer) {
+int depthGlobal = 8;
+
+double* minimax(int board[ROW_COUNT][COLUMN_COUNT], int depth, double alpha, double beta, int maximizingPlayer) {
     int* validLocations = getValidLocations(board);
     int isTerminal = isTerminalNode(board);
-    static int result[2] = {-1, 0};
+    static double result[2] = {-1.0, 0.0};
 
     if(depth == 0 || isTerminal) {
         if(isTerminal) {
             if(winningMove(board, AI)) {
-                result[1] = 100000;
+                result[1] = 100000.0;
+                // printf("\t\t\tterminal node 1: %lf\n", result[1]); // to delete
                 return result;
             }
             else if(winningMove(board, PLAYER)) {
-                result[1] = -100000;
+                result[1] = -100000.0;
+                // printf("\t\t\tterminal node 2: %lf\n", result[1]); // to delete
                 return result;
             }
             else
+                // printf("\t\t\tterminal node 3: %lf\n", result[1]); // to delete
                 return result;
         }
         else {
             result[1] = scorePosition(board, AI);
+            // printf("\t\t\tterminal node 4: %lf\n", result[1]); // to delete
             return result;
         }
     }
 
     if(maximizingPlayer) {
-        int value = LOW_VALUE;
-        int column = randChoice(validLocations);
+        double value = LOW_VALUE;
+        double column;
+        column = (double)randChoice(validLocations);
 
         for(int c=0; c<COLUMN_COUNT; c++) {
             if(validLocations[c]) {
@@ -177,18 +184,24 @@ int* minimax(int board[ROW_COUNT][COLUMN_COUNT], int depth, int alpha, int beta,
                 copyBoard(board, boardCopied);
                 dropPiece(boardCopied, c, AI);
 
-                int newScore = minimax(boardCopied, depth-1, alpha, beta, false)[1];
+                double newScore = minimax(boardCopied, depth-1, alpha, beta, false)[1] / 2;
+
+                if(depth == depthGlobal) printf("on column %d score: %lf\n", c+1, newScore); // to delete
+                if(depth == depthGlobal-2) printf("\t\ton column %d score: %lf\n", c+1, newScore); // to delete
 
                 if(newScore > value) {
                     value = newScore;
-                    column = c;
+                    column = (double)c;
                 }
 
-                if(value > alpha)
-                    alpha = value;
-
-                if(alpha >= beta)
+                if(value > beta) {
+                    // printf("Break WTF\tvalue: %lf\tbeta: %lf\n", value, beta);
                     break;
+                }
+
+                if(value > alpha) {
+                    alpha = value;
+                }
             }
         }
 
@@ -198,8 +211,9 @@ int* minimax(int board[ROW_COUNT][COLUMN_COUNT], int depth, int alpha, int beta,
         return result;
     }
     else {
-        int value = HIGH_VALUE;
-        int column = randChoice(validLocations);
+        double value = HIGH_VALUE;
+        double column;
+        column = (double)randChoice(validLocations);
 
         for(int c=0; c<COLUMN_COUNT; c++) {
             if(validLocations[c]) {
@@ -208,18 +222,23 @@ int* minimax(int board[ROW_COUNT][COLUMN_COUNT], int depth, int alpha, int beta,
                 copyBoard(board, boardCopied);
                 dropPiece(boardCopied, c, PLAYER);
 
-                int newScore = minimax(boardCopied, depth-1, alpha, beta, true)[1];
+                double newScore = minimax(boardCopied, depth-1, alpha, beta, true)[1] / 2;
+
+                if(depth == depthGlobal-1) printf("\ton column %d score: %lf\n", c+1, newScore); // to delete
 
                 if(newScore < value) {
                     value = newScore;
-                    column = c;
+                    column = (double)c;
                 }
 
-                if(value < beta)
-                    beta = value;
-
-                if(alpha >= beta)
+                if(value < alpha) {
+                    // printf("Break WTF\tvalue: %lf\talpha: %lf\n", value, alpha);
                     break;
+                }
+
+                if(value < beta) {
+                    beta = value;
+                }
             }
         }
 

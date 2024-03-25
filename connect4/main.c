@@ -45,8 +45,9 @@ int main() {
             turn = changeTurn(turn);
         }
 
-        if(turn == AI) {
-            int col = minimax(board, depth, LOW_VALUE, HIGH_VALUE, true)[0];
+        if(turn == AI && !gameOver) {
+            int col;
+            col = (int)minimax(board, depth, (double)LOW_VALUE, (double)HIGH_VALUE, true)[0];
 
             dropPiece(board, col, AI);
             printBoard(board);
@@ -59,7 +60,7 @@ int main() {
             turn = changeTurn(turn);
         }
 
-        if(isDraw(board)) {
+        if(isDraw(board) && !gameOver) {
             printf("Draw!\n\n");
             gameOver = true;
         }

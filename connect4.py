@@ -148,7 +148,12 @@ def minimax(board, depth, alpha, beta, maximizingPlayer):
             row = get_next_open_row(board, col)
             board_copy = board.copy()
             drop_piece(board_copy, row, col, AI_PIECE)
-            new_score = minimax(board_copy, depth-1, alpha, beta, False)[1]
+            new_score = minimax(board_copy, depth-1, alpha, beta, False)[1]/2
+
+            if depth == 4:
+                print(f"on column {col} score: {new_score}")
+            elif depth == 2:
+                print(f"\t\ton column {col} score: {new_score}")
 
             if new_score > value:
                 value = new_score
@@ -167,7 +172,10 @@ def minimax(board, depth, alpha, beta, maximizingPlayer):
             row = get_next_open_row(board, col)
             board_copy = board.copy()
             drop_piece(board_copy, row, col, PLAYER_PIECE)
-            new_score = minimax(board_copy, depth-1, alpha, beta, True)[1]
+            new_score = minimax(board_copy, depth-1, alpha, beta, True)[1]/2
+
+            if depth == 3:
+                print(f"\ton column {col} score: {new_score}")
 
             if new_score < value:
                 value = new_score

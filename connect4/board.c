@@ -50,7 +50,7 @@ void printBoard(int board[ROW_COUNT][COLUMN_COUNT]) {
 }
 
 int isValidColumn(int board[ROW_COUNT][COLUMN_COUNT], int column) {
-    if(board[ROW_COUNT-1][column-1] == EMPTY) return true;
+    if(board[ROW_COUNT-1][column] == EMPTY) return true;
     else return false;
 }
 
