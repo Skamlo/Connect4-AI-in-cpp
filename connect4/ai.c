@@ -151,8 +151,6 @@ int isTerminalNode(int board[ROW_COUNT][COLUMN_COUNT]) {
     return false;
 }
 
-int depthGlobal = 8;
-
 double* minimax(int board[ROW_COUNT][COLUMN_COUNT], int depth, double alpha, double beta, int maximizingPlayer) {
     int* validLocations = getValidLocations(board);
     int isTerminal = isTerminalNode(board);
@@ -199,8 +197,8 @@ double* minimax(int board[ROW_COUNT][COLUMN_COUNT], int depth, double alpha, dou
                     column = (double)c;
                 }
 
-                if(value > beta) break;
                 if(value > alpha) alpha = value;
+                if(beta <= alpha) break;
             }
         }
 
@@ -231,8 +229,8 @@ double* minimax(int board[ROW_COUNT][COLUMN_COUNT], int depth, double alpha, dou
                     column = (double)c;
                 }
 
-                if(value < alpha) break;
                 if(value < beta) beta = value;
+                if(beta <= alpha) break;
             }
         }
 

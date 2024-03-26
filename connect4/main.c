@@ -20,6 +20,21 @@ int changeTurn(int turn) {
     else return PLAYER;
 }
 
+int firstMove(int board[ROW_COUNT][COLUMN_COUNT]) {
+    int nPieces = 0;
+    for(int r=0; r<ROW_COUNT; r++) {
+        for(int c=0; c<COLUMN_COUNT; c++) {
+            if(board[r][c] != 0) nPieces++;
+        }
+    }
+
+    if(nPieces == 0 || nPieces == 1) {
+        return COLUMN_COUNT/2;
+    }
+
+    return false;
+}
+
 int main() {
     int board[ROW_COUNT][COLUMN_COUNT] = {0};
     int gameOver = false;
@@ -47,7 +62,8 @@ int main() {
 
         if(turn == AI && !gameOver) {
             int col;
-            col = (int)minimax(board, depth, (double)LOW_VALUE, (double)HIGH_VALUE, true)[0];
+            col = firstMove(board);
+            if(col = 0) col = (int)minimax(board, depth, (double)LOW_VALUE, (double)HIGH_VALUE, true)[0];
 
             dropPiece(board, col, AI);
             printBoard(board);
