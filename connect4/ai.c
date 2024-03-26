@@ -6,6 +6,7 @@ sources:
 
 #include <stdlib.h>
 #include <time.h>
+#include <math.h>
 #include "board.h"
 
 #define EMPTY 0
@@ -133,6 +134,14 @@ double scorePosition(int board[ROW_COUNT][COLUMN_COUNT], int piece) {
     return score;
 }
 
+int getColFromScore(double scores[COLUMN_COUNT], double targetValue) {
+    int columns[COLUMN_COUNT] = {false};
+    for(int i=0; i<COLUMN_COUNT; i++) {
+        if(scores[i] == targetValue) columns[i] = true;
+    }
+    return randChoice(columns);
+}
+
 int isTerminalNode(int board[ROW_COUNT][COLUMN_COUNT]) {
     if(
         winningMove(board, PLAYER) ||
@@ -153,26 +162,23 @@ double* minimax(int board[ROW_COUNT][COLUMN_COUNT], int depth, double alpha, dou
         if(isTerminal) {
             if(winningMove(board, AI)) {
                 result[1] = 100000.0;
-                // printf("\t\t\tterminal node 1: %lf\n", result[1]); // to delete
                 return result;
             }
             else if(winningMove(board, PLAYER)) {
                 result[1] = -100000.0;
-                // printf("\t\t\tterminal node 2: %lf\n", result[1]); // to delete
                 return result;
             }
             else
-                // printf("\t\t\tterminal node 3: %lf\n", result[1]); // to delete
                 return result;
         }
         else {
             result[1] = scorePosition(board, AI);
-            // printf("\t\t\tterminal node 4: %lf\n", result[1]); // to delete
             return result;
         }
     }
 
     if(maximizingPlayer) {
+        double scores[COLUMN_COUNT] = {NAN};
         double value = LOW_VALUE;
         double column;
         column = (double)randChoice(validLocations);
@@ -186,31 +192,25 @@ double* minimax(int board[ROW_COUNT][COLUMN_COUNT], int depth, double alpha, dou
 
                 double newScore = minimax(boardCopied, depth-1, alpha, beta, false)[1] / 2;
 
-                if(depth == depthGlobal) printf("on column %d score: %lf\n", c+1, newScore); // to delete
-                if(depth == depthGlobal-2) printf("\t\ton column %d score: %lf\n", c+1, newScore); // to delete
+                scores[c] = newScore;
 
                 if(newScore > value) {
                     value = newScore;
                     column = (double)c;
                 }
 
-                if(value > beta) {
-                    // printf("Break WTF\tvalue: %lf\tbeta: %lf\n", value, beta);
-                    break;
-                }
-
-                if(value > alpha) {
-                    alpha = value;
-                }
+                if(value > beta) break;
+                if(value > alpha) alpha = value;
             }
         }
 
-        result[0] = column;
+        result[0] = getColFromScore(scores, value);
         result[1] = value;
 
         return result;
     }
     else {
+        double scores[COLUMN_COUNT] = {NAN};
         double value = HIGH_VALUE;
         double column;
         column = (double)randChoice(validLocations);
@@ -224,25 +224,19 @@ double* minimax(int board[ROW_COUNT][COLUMN_COUNT], int depth, double alpha, dou
 
                 double newScore = minimax(boardCopied, depth-1, alpha, beta, true)[1] / 2;
 
-                if(depth == depthGlobal-1) printf("\ton column %d score: %lf\n", c+1, newScore); // to delete
+                scores[c] = newScore;
 
                 if(newScore < value) {
                     value = newScore;
                     column = (double)c;
                 }
 
-                if(value < alpha) {
-                    // printf("Break WTF\tvalue: %lf\talpha: %lf\n", value, alpha);
-                    break;
-                }
-
-                if(value < beta) {
-                    beta = value;
-                }
+                if(value < alpha) break;
+                if(value < beta) beta = value;
             }
         }
 
-        result[0] = column;
+        result[0] = getColFromScore(scores, value);
         result[1] = value;
 
         return result;
