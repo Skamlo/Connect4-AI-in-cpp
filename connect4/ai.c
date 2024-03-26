@@ -59,7 +59,7 @@ int getNextOpenRow(int board[ROW_COUNT][COLUMN_COUNT], int col) {
     }
 }
 
-int copyBoard(int board[ROW_COUNT][COLUMN_COUNT], int boardCopied[ROW_COUNT][COLUMN_COUNT]) {
+void copyBoard(int board[ROW_COUNT][COLUMN_COUNT], int boardCopied[ROW_COUNT][COLUMN_COUNT]) {
     for(int r=0; r<ROW_COUNT; r++) {
         for(int c=0; c<COLUMN_COUNT; c++) {
             boardCopied[r][c] = board[r][c];

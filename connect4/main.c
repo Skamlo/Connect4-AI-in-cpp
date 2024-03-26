@@ -63,7 +63,7 @@ int main() {
         if(turn == AI && !gameOver) {
             int col;
             col = firstMove(board);
-            if(col = 0) col = (int)minimax(board, depth, (double)LOW_VALUE, (double)HIGH_VALUE, true)[0];
+            if(col == 0) {col = (int)minimax(board, depth, (double)LOW_VALUE, (double)HIGH_VALUE, true)[0];}
 
             dropPiece(board, col, AI);
             printBoard(board);
