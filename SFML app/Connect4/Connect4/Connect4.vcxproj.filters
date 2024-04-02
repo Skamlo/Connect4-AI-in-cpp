@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\img">
+      <UniqueIdentifier>{9c792044-92ef-47e9-8848-557cb131ae79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\fonts">
+      <UniqueIdentifier>{983d50a5-d406-4f0a-a757-036530cf007b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ai.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Settings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Board.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ai.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Settings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Board.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="img\icon.ico">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+    <Image Include="img\logo.png">
+      <Filter>Resource Files\img</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="fonts\Lato-Black.ttf">
+      <Filter>Resource Files\fonts</Filter>
+    </Font>
+    <Font Include="fonts\Lato-BlackItalic.ttf">
+      <Filter>Resource Files\fonts</Filter>
+    </Font>
+    <Font Include="fonts\Lato-Bold.ttf">
+      <Filter>Resource Files\fonts</Filter>
+    </Font>
+    <Font Include="fonts\Lato-BoldItalic.ttf">
+      <Filter>Resource Files\fonts</Filter>
+    </Font>
+    <Font Include="fonts\Lato-Italic.ttf">
+      <Filter>Resource Files\fonts</Filter>
+    </Font>
+    <Font Include="fonts\Lato-Light.ttf">
+      <Filter>Resource Files\fonts</Filter>
+    </Font>
+    <Font Include="fonts\Lato-LightItalic.ttf">
+      <Filter>Resource Files\fonts</Filter>
+    </Font>
+    <Font Include="fonts\Lato-Regular.ttf">
+      <Filter>Resource Files\fonts</Filter>
+    </Font>
+    <Font Include="fonts\Lato-Thin.ttf">
+      <Filter>Resource Files\fonts</Filter>
+    </Font>
+    <Font Include="fonts\Lato-ThinItalic.ttf">
+      <Filter>Resource Files\fonts</Filter>
+    </Font>
+  </ItemGroup>
+</Project>
