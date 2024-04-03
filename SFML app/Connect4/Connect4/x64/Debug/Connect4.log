@@ -1,3 +1,70 @@
-﻿  Settings.cpp
-C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Settings.cpp(67,13): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+﻿  Ai.cpp
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Ai.cpp(43,22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Board.cpp
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(142,32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(143,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(144,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(145,36): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(146,76): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(146,76): warning C4244:         with
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(146,76): warning C4244:         [
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(146,76): warning C4244:             T=float
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(146,76): warning C4244:         ]
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(146,62): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(146,62): warning C4244:         with
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(146,62): warning C4244:         [
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(146,62): warning C4244:             T=float
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(146,62): warning C4244:         ]
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(147,76): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(147,76): warning C4244:         with
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(147,76): warning C4244:         [
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(147,76): warning C4244:             T=float
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(147,76): warning C4244:         ]
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(147,54): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(147,54): warning C4244:         with
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(147,54): warning C4244:         [
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(147,54): warning C4244:             T=float
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(147,54): warning C4244:         ]
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(156,34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(156,28): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(157,60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(157,46): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(158,55): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(158,31): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(159,81): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(159,49): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(160,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(160,37): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(161,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(161,34): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(183,64): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(184,24): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(248,11): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(396,16): warning C4244: 'initializing': conversion from 'T' to 'int', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(396,16): warning C4244:         with
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(396,16): warning C4244:         [
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(396,16): warning C4244:             T=float
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(396,16): warning C4244:         ]
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(398,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(398,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(409,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(409,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(415,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Board.cpp(415,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Menu.cpp
+  Settings.cpp
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Settings.cpp(69,13): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  main.cpp
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\main.cpp(104,56): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\main.cpp(104,56): warning C4244:         with
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\main.cpp(104,56): warning C4244:         [
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\main.cpp(104,56): warning C4244:             T=float
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\main.cpp(104,56): warning C4244:         ]
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\main.cpp(104,49): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\main.cpp(104,49): warning C4244:         with
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\main.cpp(104,49): warning C4244:         [
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\main.cpp(104,49): warning C4244:             T=float
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\main.cpp(104,49): warning C4244:         ]
+  Generating Code...
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\Connect4\Ai.cpp(80,1): warning C4715: 'getNextOpenRow': not all control paths return a value
   Connect4.vcxproj -> C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\SFML app\Connect4\x64\Debug\Connect4.exe

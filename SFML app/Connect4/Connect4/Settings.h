@@ -18,6 +18,8 @@ struct Colors
     sf::Color hoverSecondPlayerColor;
     sf::Color white;
     sf::Color dirtyWhite;
+    sf::Color empty;
+    sf::Color hoverEmpty;
 };
 
 void updateColors(Colors* colors);
@@ -29,6 +31,5 @@ int renderSettings(
     bool isMouseClicked,
     bool isMouseHeld,
     Colors colors,
-    int* difficultyLevel,
-    bool sliderIsHolding
+    int* difficultyLevel
 );

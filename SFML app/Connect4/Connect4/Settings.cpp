@@ -31,6 +31,8 @@ void updateColors(Colors* colors)
     colors->hoverSecondPlayerColor = sf::Color::Color(169, 196, 86, 255);
     colors->white = sf::Color::Color(247, 247, 247, 255);
     colors->dirtyWhite = sf::Color(247, 247, 247, 255);
+    colors->empty = sf::Color::Color(34, 74, 60, 255);
+    colors->hoverEmpty = sf::Color::Color(43, 94, 77, 255);
 }
 
 void drawSlider(sf::RenderWindow* window, sf::Font font, Colors colors, int difficultyLevel, float xPos, float yPos)
@@ -81,7 +83,7 @@ void drawSlider(sf::RenderWindow* window, sf::Font font, Colors colors, int diff
     window->draw(difficultyLevelText);
 }
 
-int renderSettings(sf::RenderWindow* window, sf::Font font, sf::Vector2f mousePosition, bool isMouseClicked, bool isMouseHeld, Colors colors, int* difficultyLevel, bool sliderIsHolding)
+int renderSettings(sf::RenderWindow* window, sf::Font font, sf::Vector2f mousePosition, bool isMouseClicked, bool isMouseHeld, Colors colors, int* difficultyLevel)
 {
     int output = SETTINGS;
 

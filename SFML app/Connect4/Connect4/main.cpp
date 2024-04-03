@@ -19,12 +19,21 @@
 #define SETTINGS 4
 #define EXIT 5
 
+#define EMPTY 0
+#define FIRST_PLAYER 1
+#define SECOND_PLAYER 2
+
+#define GAME 1
+#define FIRST_PLAYER_WIN 2
+#define SECOND_PLAYER_WIN 3
+#define DRAW 4
+
 // Functions declaration
 void update(sf::RenderWindow* window);
 void render(sf::RenderWindow* window);
 
 // Window params
-int fps = 144;
+const int fps = 144;
 int width = 1000;
 int height = 800;
 int currentPage = MENU;
@@ -34,14 +43,20 @@ sf::Vector2f mousePosition;
 bool isMouseClicked = false;
 bool isMouseHeld = false;
 
+// Settings
+int difficultyLevel = 8;
+
+// Board
+int board[6][7] = {0};
+int currentPlayer = FIRST_PLAYER;
+int state = GAME;
+bool gameStart = false;
+int waitTimer = 0;
+
 // Other
 sf::Font font;
 sf::Texture logo;
 Colors colors;
-
-// Settings
-int difficultyLevel = 8;
-bool sliderIsHolding = false;
 
 int main()
 {
@@ -62,6 +77,9 @@ int main()
     if (!logo.loadFromFile("img/logo.png"))
         std::cout << "ERROR: Failed during loading logo.png file" << "\n";
     updateColors(&colors);
+
+    // Reset board
+    resetBoard(board);
 
     // Main loop
     while (window.isOpen())
@@ -128,11 +146,35 @@ void render(sf::RenderWindow* window)
         break;
 
     case PLAYERvsPLAYER:
-        currentPage = renderBoard(window);
-        break;
-
     case PLAYERvsAI:
-        currentPage = renderBoard(window);
+        if (gameStart)
+        {
+            resetBoard(board);
+            state = GAME;
+            gameStart = false;
+            currentPlayer = FIRST_PLAYER;
+        }
+
+        currentPage = renderBoard(
+            window,
+            board,
+            font,
+            mousePosition,
+            isMouseClicked,
+            isMouseHeld,
+            &currentPlayer,
+            colors,
+            &difficultyLevel,
+            currentPage,
+            &state,
+            &waitTimer
+        );
+
+        if (currentPage == MENU || currentPage == SETTINGS)
+        {
+            gameStart = true;
+        }
+
         break;
 
     case SETTINGS:
@@ -143,8 +185,7 @@ void render(sf::RenderWindow* window)
             isMouseClicked,
             isMouseHeld,
             colors,
-            &difficultyLevel,
-            &sliderIsHolding
+            &difficultyLevel
         );
         break;
 
