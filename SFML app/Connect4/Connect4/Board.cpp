@@ -33,7 +33,10 @@
 #define LOW_VALUE -1000000000
 #define HIGH_VALUE 1000000000
 
+#define PI 3.141592653
+
 const int fps = 144;
+const float endSecondsWaiting = 3.0;
 
 void resetBoard(int (*board)[COLUMN_COUNT])
 {
@@ -259,7 +262,7 @@ int renderBoard(sf::RenderWindow* window, int (*board)[COLUMN_COUNT], sf::Font f
 
 			*state = updateState(board);
 			if (*state != GAME)
-				*waitTimer = 3 * fps;
+				*waitTimer = endSecondsWaiting * fps;
 		}
 		else if (currentPage == PLAYERvsAI)
 		{
@@ -269,7 +272,7 @@ int renderBoard(sf::RenderWindow* window, int (*board)[COLUMN_COUNT], sf::Font f
 
 			*state = updateState(board);
 			if (*state != GAME)
-				*waitTimer = 3 * fps;
+				*waitTimer = endSecondsWaiting * fps;
 			else
 				*waitTimer = fps / 2;
 		}
@@ -304,7 +307,7 @@ int renderBoard(sf::RenderWindow* window, int (*board)[COLUMN_COUNT], sf::Font f
 		// Update game state
 		*state = updateState(board);
 		if (*state != GAME)
-			*waitTimer = 3 * fps;
+			*waitTimer = endSecondsWaiting * fps;
 	}
 
 	// Player state
@@ -338,6 +341,41 @@ int renderBoard(sf::RenderWindow* window, int (*board)[COLUMN_COUNT], sf::Font f
 		float yPos = height - 58;
 		currentPlayerText.setPosition(xPos, yPos);
 		window->draw(currentPlayerText);
+	}
+	else
+	{
+		int xPos = width - 86;
+		int yPos = height - 86;
+
+		// Background circle
+		sf::CircleShape backgroundCircle(23);
+		backgroundCircle.setPosition(xPos + 20, yPos + 20);
+		backgroundCircle.setFillColor(colors.foregroundColor);
+		window->draw(backgroundCircle);
+
+		// Foreground circle
+		sf::CircleShape foregroundCircle(18);
+		foregroundCircle.setPosition(xPos + 25, yPos + 25);
+		foregroundCircle.setFillColor(colors.backgroundColor);
+		window->draw(foregroundCircle);
+
+		// Loading polygon
+		float fillRato = static_cast<float>(*waitTimer) / (endSecondsWaiting * fps);
+
+		sf::ConvexShape convex;
+		convex.setFillColor(colors.backgroundColor);
+		convex.setPointCount(8);
+		convex.setPoint(0, sf::Vector2f(xPos + 43, yPos + 43));
+		convex.setPoint(1, sf::Vector2f(xPos + 43, yPos));
+		for (int i = 2; i < 8; i++)
+		{
+			float partFillRato = 1 - fillRato;
+			partFillRato = partFillRato / 6 * (i - 1);
+			int xRato = static_cast<int>(43 * sin(partFillRato * 2 * PI));
+			int yRato = -static_cast<int>(43 * cos(partFillRato * 2 * PI));
+			convex.setPoint(i, sf::Vector2f(xPos + 43 + xRato, yPos + 43 + yRato));
+		}
+		window->draw(convex);
 	}
 
 	// Back button

@@ -77,7 +77,11 @@ void drawSlider(sf::RenderWindow* window, sf::Font font, Colors colors, int diff
     window->draw(foregroundBall);
 
     // Number over ball
-    sf::Text difficultyLevelText(std::to_string(difficultyLevel), font, 18);
+    sf::Text difficultyLevelText("None", font, 18);
+    if (difficultyLevel == 0)
+        difficultyLevelText.setString("Random choices");
+    else
+        difficultyLevelText.setString(std::to_string(difficultyLevel));
     float textWdith = difficultyLevelText.getLocalBounds().width;
     difficultyLevelText.setPosition(xPos + x + 13 - (textWdith / 2), yPos - 29);
     window->draw(difficultyLevelText);
