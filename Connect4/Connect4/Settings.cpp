@@ -2,6 +2,7 @@
 #include "Menu.h"
 
 #include <iostream>
+#include <fstream>
 #include <string>
 
 #include <SFML/Graphics.hpp>
@@ -34,6 +35,80 @@ void updateColors(Colors* colors)
     colors->empty = sf::Color::Color(34, 74, 60, 255);
     colors->hoverEmpty = sf::Color::Color(43, 94, 77, 255);
 }
+
+
+void readNameAndValue(std::string& line, std::string& name, std::string& value)
+{
+    size_t start_pos = line.find('"');
+    if (start_pos != std::string::npos)
+    {
+        size_t end_pos = line.find('"', start_pos + 1);
+        if (end_pos != std::string::npos)
+        {
+            name = line.substr(start_pos + 1, end_pos - start_pos - 1);
+            size_t colon_pos = line.find(':', end_pos);
+            if (colon_pos != std::string::npos)
+            {
+                value = line.substr(colon_pos + 1);
+                // Trim leading and trailing whitespaces from the value
+                value.erase(0, value.find_first_not_of(" \n\r\t"));
+                value.erase(value.find_last_not_of(" \n\r\t") + 1);
+            }
+        }
+    }
+}
+
+
+void saveSettings(int difficultyLevel)
+{
+    std::ofstream file("settings/settings.json");
+
+    if (file.is_open())
+    {
+        file << "{\"settings\": {" << std::endl
+            << "\t\"difficultyLevel\": " << difficultyLevel << std::endl
+            << "}}";
+    }
+    else
+    {
+        std::cout << "SETTINGS::SAVE_SETTINGS::IS_FILE_OPEN::Failed   Can't open settings.json file" << std::endl;
+    }
+
+    file.close();
+}
+
+
+void readSettings(int* difficultyLevel)
+{
+    std::ifstream file("settings/settings.json");
+
+    if (file.is_open())
+    {
+        int nParams = 1;
+
+        std::string line;
+        std::getline(file, line);
+
+        for (int i = 0; i < nParams; i++)
+        {
+            std::getline(file, line);
+            std::string name, valueString;
+            readNameAndValue(line, name, valueString);
+
+            int valueInt = std::stoi(valueString);
+
+            if (name == "difficultyLevel")
+                *difficultyLevel = valueInt;
+        }
+    }
+    else
+    {
+        std::cout << "SETTINGS::READ_SETTINGS::IS_FILE_OPEN::Failed   Can't open settings.json file" << std::endl;
+    }
+
+    file.close();
+}
+
 
 void drawSlider(sf::RenderWindow* window, sf::Font font, Colors colors, int difficultyLevel, float xPos, float yPos)
 {
@@ -87,6 +162,7 @@ void drawSlider(sf::RenderWindow* window, sf::Font font, Colors colors, int diff
     window->draw(difficultyLevelText);
 }
 
+
 int renderSettings(sf::RenderWindow* window, sf::Font font, sf::Vector2f mousePosition, bool isMouseClicked, bool isMouseHeld, Colors colors, int* difficultyLevel)
 {
     int output = SETTINGS;
@@ -130,6 +206,8 @@ int renderSettings(sf::RenderWindow* window, sf::Font font, sf::Vector2f mousePo
                 *difficultyLevel = MAX_DIFFICULTY_LEVEL;
             else
                 *difficultyLevel = static_cast<int>(round((mousePosition.x - xPosSlider - 13) / 500 * MAX_DIFFICULTY_LEVEL));
+
+            saveSettings(*difficultyLevel);
         }
     }
 

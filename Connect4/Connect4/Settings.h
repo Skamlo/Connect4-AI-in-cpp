@@ -22,6 +22,10 @@ struct Colors
     sf::Color hoverEmpty;
 };
 
+void readNameAndValue(std::string& line, std::string& name, std::string& value);
+void saveSettings(int difficultyLevel);
+void readSettings(int* difficultyLevel);
+
 void updateColors(Colors* colors);
 
 int renderSettings(

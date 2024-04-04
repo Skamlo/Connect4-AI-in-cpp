@@ -90,21 +90,20 @@ C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\pr
 C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\Board.cpp(447,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\Board.cpp(453,35): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\Board.cpp(453,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  main.cpp
-C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(104,56): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(104,56): warning C4244:         with
-C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(104,56): warning C4244:         [
-C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(104,56): warning C4244:             T=float
-C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(104,56): warning C4244:         ]
-C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(104,49): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(104,49): warning C4244:         with
-C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(104,49): warning C4244:         [
-C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(104,49): warning C4244:             T=float
-C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(104,49): warning C4244:         ]
   Menu.cpp
-  Player.cpp
   Settings.cpp
-C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\Settings.cpp(69,13): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\Settings.cpp(144,13): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+  main.cpp
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(107,56): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(107,56): warning C4244:         with
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(107,56): warning C4244:         [
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(107,56): warning C4244:             T=float
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(107,56): warning C4244:         ]
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(107,49): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(107,49): warning C4244:         with
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(107,49): warning C4244:         [
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(107,49): warning C4244:             T=float
+C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\main.cpp(107,49): warning C4244:         ]
   Generating Code...
 C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\Connect4\Ai.cpp(80,1): warning C4715: 'getNextOpenRow': not all control paths return a value
   Connect4.vcxproj -> C:\Users\maksy\OneDrive\Pulpit\Studia\Semestr 2\programowanie nieskopoziomowe\project\Connect4\x64\Debug\Connect4.exe

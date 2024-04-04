@@ -44,7 +44,7 @@ bool isMouseClicked = false;
 bool isMouseHeld = false;
 
 // Settings
-int difficultyLevel = 8;
+int difficultyLevel;
 
 // Board
 int board[6][7] = {0};
@@ -80,6 +80,9 @@ int main()
 
     // Reset board
     resetBoard(board);
+
+    // Load settings
+    readSettings(&difficultyLevel);
 
     // Main loop
     while (window.isOpen())
