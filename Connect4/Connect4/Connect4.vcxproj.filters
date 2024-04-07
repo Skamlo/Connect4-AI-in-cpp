@@ -19,6 +19,9 @@
     <Filter Include="Resource Files\fonts">
       <UniqueIdentifier>{983d50a5-d406-4f0a-a757-036530cf007b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Settings">
+      <UniqueIdentifier>{082ff195-c8c0-4886-905f-4d630f5b5072}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -96,5 +99,10 @@
     <Font Include="fonts\Lato-ThinItalic.ttf">
       <Filter>Resource Files\fonts</Filter>
     </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="settings\settings.json">
+      <Filter>Resource Files\Settings</Filter>
+    </None>
   </ItemGroup>
 </Project>

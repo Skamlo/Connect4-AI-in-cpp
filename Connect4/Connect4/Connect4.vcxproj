@@ -163,6 +163,9 @@
     <Font Include="fonts\Lato-Thin.ttf" />
     <Font Include="fonts\Lato-ThinItalic.ttf" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="settings\settings.json" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

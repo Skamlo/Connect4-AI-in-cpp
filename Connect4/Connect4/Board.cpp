@@ -242,7 +242,7 @@ int renderBoard(sf::RenderWindow* window, int (*board)[COLUMN_COUNT], sf::Font f
 	int yPos = static_cast<int>((height - 68 - squareSize * ROW_COUNT) / 2);
 	drawBoard(window, board, xPos, yPos, squareSize, mousePosition, colors, state);
 
-	// Get decision from bourd
+	// Get decision from board
 	if (isMouseClicked &&
 		mousePosition.x >= xPos && mousePosition.x < xPos + squareSize * COLUMN_COUNT &&
 		mousePosition.y >= yPos && mousePosition.y < yPos + squareSize * ROW_COUNT &&

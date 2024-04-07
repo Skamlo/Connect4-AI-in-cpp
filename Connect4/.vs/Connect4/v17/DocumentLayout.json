@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\maksy\\OneDrive\\Pulpit\\Studia\\Semestr 2\\programowanie nieskopoziomowe\\project\\Connect4\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1ECD08E0-68F3-4E30-9719-7F929109226C}|Connect4\\Connect4.vcxproj|C:\\Users\\maksy\\OneDrive\\Pulpit\\Studia\\Semestr 2\\programowanie nieskopoziomowe\\project\\Connect4\\Connect4\\Ai.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1ECD08E0-68F3-4E30-9719-7F929109226C}|Connect4\\Connect4.vcxproj|solutionrelative:Connect4\\Ai.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ECD08E0-68F3-4E30-9719-7F929109226C}|Connect4\\Connect4.vcxproj|C:\\Users\\maksy\\OneDrive\\Pulpit\\Studia\\Semestr 2\\programowanie nieskopoziomowe\\project\\Connect4\\Connect4\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{1ECD08E0-68F3-4E30-9719-7F929109226C}|Connect4\\Connect4.vcxproj|solutionrelative:Connect4\\Player.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1ECD08E0-68F3-4E30-9719-7F929109226C}|Connect4\\Connect4.vcxproj|C:\\Users\\maksy\\OneDrive\\Pulpit\\Studia\\Semestr 2\\programowanie nieskopoziomowe\\project\\Connect4\\Connect4\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{1ECD08E0-68F3-4E30-9719-7F929109226C}|Connect4\\Connect4.vcxproj|solutionrelative:Connect4\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1ECD08E0-68F3-4E30-9719-7F929109226C}|Connect4\\Connect4.vcxproj|C:\\Users\\maksy\\OneDrive\\Pulpit\\Studia\\Semestr 2\\programowanie nieskopoziomowe\\project\\Connect4\\Connect4\\Settings.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1ECD08E0-68F3-4E30-9719-7F929109226C}|Connect4\\Connect4.vcxproj|solutionrelative:Connect4\\Settings.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1ECD08E0-68F3-4E30-9719-7F929109226C}|Connect4\\Connect4.vcxproj|C:\\Users\\maksy\\OneDrive\\Pulpit\\Studia\\Semestr 2\\programowanie nieskopoziomowe\\project\\Connect4\\Connect4\\Settings.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1ECD08E0-68F3-4E30-9719-7F929109226C}|Connect4\\Connect4.vcxproj|solutionrelative:Connect4\\Settings.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,46 +22,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 196,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Settings.cpp",
-              "DocumentMoniker": "C:\\Users\\maksy\\OneDrive\\Pulpit\\Studia\\Semestr 2\\programowanie nieskopoziomowe\\project\\Connect4\\Connect4\\Settings.cpp",
-              "RelativeDocumentMoniker": "Connect4\\Settings.cpp",
-              "ToolTip": "C:\\Users\\maksy\\OneDrive\\Pulpit\\Studia\\Semestr 2\\programowanie nieskopoziomowe\\project\\Connect4\\Connect4\\Settings.cpp",
-              "RelativeToolTip": "Connect4\\Settings.cpp",
-              "ViewState": "AQIAADkAAAAAAAAAAAAswE0AAAABAAAA",
+              "DocumentIndex": 0,
+              "Title": "Ai.cpp",
+              "DocumentMoniker": "C:\\Users\\maksy\\OneDrive\\Pulpit\\Studia\\Semestr 2\\programowanie nieskopoziomowe\\project\\Connect4\\Connect4\\Ai.cpp",
+              "RelativeDocumentMoniker": "Connect4\\Ai.cpp",
+              "ToolTip": "C:\\Users\\maksy\\OneDrive\\Pulpit\\Studia\\Semestr 2\\programowanie nieskopoziomowe\\project\\Connect4\\Connect4\\Ai.cpp",
+              "RelativeToolTip": "Connect4\\Ai.cpp",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-04-04T10:32:24.484Z",
+              "WhenOpened": "2024-04-07T11:07:29.139Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Settings.h",
-              "DocumentMoniker": "C:\\Users\\maksy\\OneDrive\\Pulpit\\Studia\\Semestr 2\\programowanie nieskopoziomowe\\project\\Connect4\\Connect4\\Settings.h",
-              "RelativeDocumentMoniker": "Connect4\\Settings.h",
-              "ToolTip": "C:\\Users\\maksy\\OneDrive\\Pulpit\\Studia\\Semestr 2\\programowanie nieskopoziomowe\\project\\Connect4\\Connect4\\Settings.h",
-              "RelativeToolTip": "Connect4\\Settings.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-04-04T10:32:23.014Z",
-              "EditorCaption": ""
+              "Title": "Player.cpp",
+              "DocumentMoniker": "C:\\Users\\maksy\\OneDrive\\Pulpit\\Studia\\Semestr 2\\programowanie nieskopoziomowe\\project\\Connect4\\Connect4\\Player.cpp",
+              "RelativeDocumentMoniker": "Connect4\\Player.cpp",
+              "ToolTip": "C:\\Users\\maksy\\OneDrive\\Pulpit\\Studia\\Semestr 2\\programowanie nieskopoziomowe\\project\\Connect4\\Connect4\\Player.cpp",
+              "RelativeToolTip": "Connect4\\Player.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-04-07T11:07:16.865Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "main.cpp",
               "DocumentMoniker": "C:\\Users\\maksy\\OneDrive\\Pulpit\\Studia\\Semestr 2\\programowanie nieskopoziomowe\\project\\Connect4\\Connect4\\main.cpp",
               "RelativeDocumentMoniker": "Connect4\\main.cpp",
               "ToolTip": "C:\\Users\\maksy\\OneDrive\\Pulpit\\Studia\\Semestr 2\\programowanie nieskopoziomowe\\project\\Connect4\\Connect4\\main.cpp",
               "RelativeToolTip": "Connect4\\main.cpp",
-              "ViewState": "AQIAADIAAAAAAAAAAAAkwEYAAAArAAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAiwE4AAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-03-31T14:58:02.089Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-07T10:56:59.399Z"
             }
           ]
         }
