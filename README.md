@@ -6,6 +6,3 @@ Project present an Connect 4 game wrote in C++ with SFML library. The applicatio
 
 ### How to run it
 Currently only way is open .sln project and run by Visual Studio. All necessery files from SFML library are posted in project, so you dont't have to previously download any other files.
-
-### Contact
-✉ maksymiliannorkiewicz@gmail.com
